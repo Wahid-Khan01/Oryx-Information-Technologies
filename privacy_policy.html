@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Oryx Information Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar {
+      transition: all 0.3s ease;
+    }
+    .navbar.scrolled {
+      background-color: #1e40af;
+      /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                  0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+        /* color: white; */
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="navbar fixed top-0 left-0 w-full z-50" style="background-color: #1e40af;">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="oryx.png" alt="Oryx Logo" class="w-40 h-auto">
+      <nav>
+        <a href="/" class="text-white font-semibold hover:text-blue-700">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 px-4 md:px-16 max-w-7xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">Privacy Policy</h1>
+
+    <div class="bg-white rounded-lg shadow-md p-6 md:p-10">
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">1. Introduction</h2>
+        <p class="text-gray-700 mb-4">
+          Oryx Information Technologies ("we", "our", or "us") is committed to protecting your privacy.
+          This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">2. Information We Collect</h2>
+        <p class="text-gray-700 mb-4">
+          We may collect personal information that you voluntarily provide to us, including:
+        </p>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li>Name and contact information (email, phone number)</li>
+          <li>Company/organization information</li>
+          <li>Any other information you provide in contact forms</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
+        <p class="text-gray-700 mb-4">We may use the information we collect for various purposes, including:</p>
+        <ul class="list-disc pl-6 mb-4 text-gray-700">
+          <li>To provide and maintain our services</li>
+          <li>To notify you about changes to our services</li>
+          <li>To respond to your inquiries and provide customer support</li>
+          <li>For analytics and improving our website</li>
+        </ul>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">4. Data Security</h2>
+        <p class="text-gray-700 mb-4">
+          We implement appropriate technical and organizational measures to protect your personal information.
+          However, no internet transmission or electronic storage is completely secure.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">5. Cookies and Tracking Technologies</h2>
+        <p class="text-gray-700 mb-4">
+          We may use cookies and similar tracking technologies to track activity on our website and hold certain information.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4">6. Changes to This Privacy Policy</h2>
+        <p class="text-gray-700 mb-4">
+          We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">7. Contact Us</h2>
+        <p class="text-gray-700">
+          If you have any questions about this Privacy Policy, please contact us at:
+          <br>
+          <strong>Email:</strong> <a href="mailto:sshaikh@oryxinfotechnologies.com" class="text-blue-600">sshaikh@oryxinfotechnologies.com</a>
+          <br>
+          <strong>HR Email:</strong> <a href="mailto:hr@oryxinfotechnologies.com" class="text-blue-600">hr@oryxinfotechnologies.com</a>
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-16">
+      <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-blue-300 text-sm mb-4 md:mb-0">&copy; <span id="year"></span> Oryx Information Technologies. All rights reserved.</p>
+        <div>
+          <a href="terms_of_service.html" class="text-blue-300 hover:text-white text-sm mr-4">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Auto update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

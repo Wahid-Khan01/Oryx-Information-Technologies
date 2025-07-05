@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oryx Information Technologies | Tech Solutions Provider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css CDN for prebuilt animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: #1e40af;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/82bb67e7-06d9-440c-804f-b7d28fc92233.png') no-repeat center center/cover;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .tech-icon {
+            transition: all 0.3s ease;
+        }
+
+        .tech-icon:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .service-card.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 px-4 md:px-16 py-4 bg-blue-800 text-white">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <div class="flex items-center">
+                <a href=""><img src="oryx.png" alt="Oryx Information Technologies Logo" class="h-12"></a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="" class="hover:text-blue-200 transition">Home</a>
+                <a href="#services" class="hover:text-blue-200 transition">Services</a>
+                <a href="#technologies" class="hover:text-blue-200 transition">Technologies</a>
+                <a href="#about" class="hover:text-blue-200 transition">About</a>
+                <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden fixed inset-0 z-40 bg-blue-900 text-white pt-20 px-4">
+        <div class="flex flex-col space-y-6 text-center">
+            <a href="#home" class="py-2 hover:text-blue-200 transition">Home</a>
+            <a href="#services" class="py-2 hover:text-blue-200 transition">Services</a>
+            <a href="#technologies" class="py-2 hover:text-blue-200 transition">Technologies</a>
+            <a href="#about" class="py-2 hover:text-blue-200 transition">About</a>
+            <a href="#contact" class="py-2 hover:text-blue-200 transition">Contact</a>
+            <button class="close-menu absolute top-4 right-4 text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="hero-section min-h-screen flex items-center justify-center text-white pt-20 bg-cover bg-center bg-blue-950">
+        <div class="max-w-7xl mx-auto px-4 md:px-16 py-20 text-center">
+
+            <!-- Animated Heading -->
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate__animated animate__fadeInDown">
+                Innovative Tech Solutions for Your Business
+            </h1>
+
+            <!-- Animated Paragraph with delay -->
+            <p
+                class="text-xl md:text-2xl mb-10 max-w-4xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+                Oryx Information Technologies delivers cutting-edge technology services customized to accelerate your
+                digital transformation journey.
+            </p>
+
+            <!-- Animated Buttons with staggered delays -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#services"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition animate__animated animate__fadeInLeft animate__delay-2s">
+                    Our Services
+                </a>
+                <a href="#contact"
+                    class="bg-transparent hover:bg-blue-900 border-2 border-white text-white px-8 py-3 rounded-lg font-medium transition animate__animated animate__fadeInRight animate__delay-2s">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Services</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">Comprehensive technology services to
+                meet all your business needs</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">Custom Software Development</h3>
+                        </div>
+                        <p class="text-gray-600">Tailored solutions in Python, Golang, and WordPress to streamline your
+                            business operations and enhance productivity.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-database text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">Database Solutions</h3>
+                        </div>
+                        <p class="text-gray-600">Expert implementation of both SQL and NoSQL databases to ensure optimal
+                            data management and performance.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-server text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">DevOps Services</h3>
+                        </div>
+                        <p class="text-gray-600">End-to-end DevOps solutions using AWS, GCP, Docker, GitLab, GitHub, and
+                            Infrastructure as Code for seamless deployments.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-code text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">Web Development</h3>
+                        </div>
+                        <p class="text-gray-600">Building responsive, high-performance websites and web applications
+                            tailored to your business objectives.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-cloud-download-alt text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">Web Scraping</h3>
+                        </div>
+                        <p class="text-gray-600">Custom web scraping solutions to gather valuable data from various
+                            online sources for business intelligence.</p>
+                    </div>
+                </div>
+
+                <!-- New Services -->
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-code text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">Expert Coder</h3>
+                        </div>
+                        <p class="text-gray-600">Our expert coders are ready to tackle any programming challenge you
+                            face.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-paint-brush text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">Creative Designer</h3>
+                        </div>
+                        <p class="text-gray-600">Our creative designers will bring your ideas to life with stunning
+                            visuals.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-shopping-cart text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">E-Commerce Development</h3>
+                        </div>
+                        <p class="text-gray-600">We create robust e-commerce platforms to help you sell online
+                            effectively.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-500 ease-in-out">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                            </div>
+                            <h3 class="ml-4 text-xl font-semibold">24/7 Tech Support</h3>
+                        </div>
+                        <p class="text-gray-600">Our support team is available 24/7 to assist you with any tech related
+                            issues.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 mt-6">And many more...</p>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Technologies We Work With</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">We leverage cutting-edge technologies
+                to deliver exceptional solutions</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                <!-- Python -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d19fa03a-7e8b-46a6-8aa8-144391af2d3b.png"
+                        alt="Python logo - Official Python programming language logo in blue and yellow colors"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">Python</h3>
+                </div>
+
+                <!-- Golang -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a7676f2e-3ae8-4013-a6ad-388b0d7c3a53.png"
+                        alt="Golang logo - Official Go programming language logo in blue color"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">Golang</h3>
+                </div>
+
+                <!-- WordPress -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b98a1170-9b4b-43f8-ab19-b54f9729a106.png"
+                        alt="WordPress logo - Official WordPress CMS logo in dark blue color"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">WordPress</h3>
+                </div>
+
+                <!-- AWS -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6583b3cc-fe8b-4573-9ad3-e0a90d254879.png"
+                        alt="AWS logo - Amazon Web Services cloud platform logo with orange arrow"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">AWS</h3>
+                </div>
+
+                <!-- GCP -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39984844-02d8-4a96-bea4-09f2e85a8a30.png"
+                        alt="GCP logo - Google Cloud Platform logo in blue, green, and yellow colors"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">GCP</h3>
+                </div>
+
+                <!-- Docker -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a6b741ac-27c5-4492-a235-dddd54a27a02.png"
+                        alt="Docker logo - Blue whale carrying containers representing Docker container technology"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">Docker</h3>
+                </div>
+
+                <!-- GitLab -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/48285c17-2342-40b9-adf8-e9d3a28b2678.png"
+                        alt="GitLab logo - Orange GitLab logo representing the git repository management platform"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">GitLab</h3>
+                </div>
+
+                <!-- GitHub -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/96ba2757-701c-4a78-b5a1-8b6ad44c77bd.png"
+                        alt="GitHub logo - Black GitHub logo with white cat silhouette representing the code hosting platform"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">GitHub</h3>
+                </div>
+
+                <!-- SQL -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/74af3524-b9b0-4ccf-9657-12977b903c51.png"
+                        alt="SQL logo - Database icon representing structured query language for relational databases"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">SQL</h3>
+                </div>
+
+                <!-- NoSQL -->
+                <div class="service-card tech-card bg-white rounded-lg shadow-sm p-6 flex flex-col items-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8492e285-d934-488e-9b8e-caf92f06d4a5.png"
+                        alt="NoSQL logo - Database icon representing non-relational database technologies"
+                        class="tech-icon h-16 w-16 mb-4">
+                    <h3 class="font-medium">NoSQL</h3>
+                </div>
+            </div>
+            <p class="text-center text-gray-600 mt-6">And many more...</p>
+        </div>
+    </section>
+
+    <!-- About/Locations Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">About Us</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">Delivering innovative tech solutions
+                with excellence and integrity</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8df02885-6b10-47fa-98a5-101fb5ea39ec.png"
+                        alt="Oryx Infotechnologies team working in a modern office - Diverse group of software developers collaborating in a bright office space with computers and whiteboards"
+                        class="rounded-lg shadow-md">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Who We Are</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Oryx Information Technologies is a premier technology solutions provider specializing in custom
+                        software development,
+                        database solutions, Data Analytics and DevOps services. Our team of experienced professionals is
+                        dedicated to delivering
+                        high-quality, scalable, and innovative solutions tailored to our clients' unique business needs.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        With offices in Mumbai and Hyderabad, we combine global expertise with local understanding to
+                        provide
+                        exceptional technical support and consulting services across various industries.
+                    </p>
+
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold mb-4">Our Offices</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Mumbai Office -->
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                                <div class="flex items-start mb-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Mumbai Office</h4>
+                                        <p class="text-gray-600 text-sm">Office in Mumbai</p>
+                                    </div>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4416e8ff-9f06-49b0-b7a7-c82754d71871.png"
+                                    alt="Oryx Mumbai office exterior - Modern glass-fronted office building in Mumbai's business district with lush landscaping"
+                                    class="rounded-md mt-2">
+                            </div>
+
+                            <!-- Hyderabad Office -->
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                                <div class="flex items-start mb-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Hyderabad Office</h4>
+                                        <p class="text-gray-600 text-sm">Office in Hyderabad</p>
+                                    </div>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b1aa836d-108a-424f-b432-9116b278af23.png"
+                                    alt="Oryx Hyderabad office interior - Contemporary workspace in Hitech City with modern furniture and tech setups"
+                                    class="rounded-md mt-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">What Our Clients Say</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">Hear from businesses that partnered
+                with us</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ae7ae9c8-2219-4284-b073-13e5b2426bae.png"
+                            alt="Client testimonial - Portrait of satisfied middle-aged male client wearing business casual attire with a smile"
+                            class="h-16 w-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Rahul Sharma</h4>
+                            <p class="text-blue-600 text-sm">Founder, Freight Sequence</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Oryx Information Technologies delivered an exceptional Python-based inventory management system
+                        that transformed our operations. Their attention to detail and technical expertise is
+                        unmatched."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/357f3710-f5d4-4100-ae39-3aaf01bc4aa2.png"
+                            alt="Client testimonial - Portrait of satisfied female executive with modern professional hairstyle and business attire"
+                            class="h-16 w-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Priya Patel</h4>
+                            <p class="text-blue-600 text-sm">Owner, Ibex InfoTech</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Their DevOps team migrated our infrastructure to AWS with zero downtime. The automation they
+                        implemented saved us 40% in operational costs. Definitely recommend!"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d04547b7-5edc-4b97-82d9-16b925a0a005.png"
+                            alt="Client testimonial - Portrait of senior male business leader with glasses in formal attire looking professional"
+                            class="h-16 w-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold">Vikram Joshi</h4>
+                            <p class="text-blue-600 text-sm">Manager, Fintech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "From web scraping solutions to complete database overhaul, Oryx has been our trusted technology
+                        partner for 3 years. Their technical support is outstanding."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Get In Touch</h2>
+            <p class="text-xl text-center text-blue-200 mb-12 max-w-3xl mx-auto">Ready to discuss your project? Reach
+                out to our team</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form action="https://formsubmit.co/sshaikh@oryxinfotechnologies.com" method="POST" class="space-y-6">
+                        <!-- Optional: prevent spam -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://oryxinfotechnologies.com/thanks.html">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email" id="email" name="name" required
+                                class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="What are you looking for?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="5" name="message" required
+                                class="w-full px-4 py-3 rounded-lg bg-blue-700 border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Send
+                            Message</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="bg-blue-900 bg-opacity-50 rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+                        <div class="space-y-6">
+                            <!-- Email 1 -->
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Sales & General Inquiries</h4>
+                                    <a href="mailto:sshaikh@oryxinfotechnologies.com"
+                                        class="text-blue-200 hover:text-white transition">skumar@oryxinfotechnologies.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Email 2 -->
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-users text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">HR & Career Opportunities</h4>
+                                    <a href="mailto:hr@oryxinfotechnologies.com"
+                                        class="text-blue-200 hover:text-white transition">hr@oryxinfotechnologies.com</a>
+                                </div>
+                            </div>
+
+                            <!-- Mumbai Office -->
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Mumbai Office</h4>
+                                    <p>Head Office</p>
+                                </div>
+                            </div>
+
+                            <!-- Hyderabad Office -->
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Chennai Office</h4>
+                                    <p>Sales Office</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-3">Connect With Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="mailto:sshaikh@oryxinfotechnologies.com"
+                                    class="social-icon bg-blue-700 hover:bg-blue-600 h-10 w-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <img src="oryx.png" alt="Oryx Infotechnologies Logo - White version of the company logo"
+                        class="h-12 mb-6">
+                    <p class="text-blue-200">
+                        Oryx Infotechnologies provides innovative technology solutions to help businesses accelerate
+                        their digital transformation.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-blue-200 hover:text-white transition">Services</a></li>
+                        <li><a href="#technologies" class="text-blue-200 hover:text-white transition">Technologies</a>
+                        </li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="" class="text-blue-200 hover:text-white transition" onclick="return false">Custom
+                                Development</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition"
+                                onclick="return false">Database Solutions</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition" onclick="return false">DevOps
+                                Services</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition" onclick="return false">Web
+                                Development</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition" onclick="return false">24/7
+                                Tech Support</a></li>
+                    </ul>
+                </div>
+
+                <form action="https://formsubmit.co/sshaikh@oryxinfotechnologies.com" method="POST">
+                    <!-- Optional: Spam & redirect control -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription!">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_next" value="https://oryxinfotechnologies.com/thanks.html">
+                  
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-blue-200 mb-4">Subscribe to our newsletter for tech updates and company news.</p>
+                    <div class="flex">
+                      <input type="email" name="email" required placeholder="Your Email"
+                        class="px-4 py-2 bg-blue-800 text-white rounded-l-lg focus:outline-none flex-grow">
+                      <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">
+                        <i class="fas fa-paper-plane"></i>
+                      </button>
+                    </div>
+                  </form>
+            </div>
+
+            <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-blue-300 text-sm mb-4 md:mb-0">© 2023 Oryx Infotechnologies. All rights reserved.</p>
+                <div>
+                    <a href="privacy_policy.html" class="text-blue-300 hover:text-white text-sm mr-4">Privacy Policy</a>
+                    <a href="terms_of_service.html" class="text-blue-300 hover:text-white text-sm">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').style.display = 'none';
+
+        document.querySelector('.fa-bars').addEventListener('click', function () {
+            document.querySelector('.mobile-menu').style.display = 'block';
+        });
+
+        document.querySelector('.close-menu').addEventListener('click', function () {
+            document.querySelector('.mobile-menu').style.display = 'none';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelector('.mobile-menu').style.display = 'none';
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animation for service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        serviceCards.forEach(card => {
+            observer.observe(card);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+    </script>
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script>
+        window.addEventListener('scroll', function () {
+            const scrollBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = 'flex';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
